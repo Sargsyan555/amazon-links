@@ -1,0 +1,89 @@
+// Основные стили для контейнера с продуктами
+.products-container {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  // Сетка для отображения продуктов
+  .products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(299px, 1fr)); // Гибкие колонки, автоматически подстраиваются под ширину экрана
+    gap: 70px; // Меньший gap для более плотного расположения
+  }
+  
+  // Стили для карточки продукта
+  .product-card {
+    width: 100%; // 100% от доступного размера родительского элемента
+    height: 350px; // Установлена фиксированная высота, но лучше адаптировать по контенту
+    // background-color: #000000;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+  
+    &:hover {
+      transform: scale(1.05); // Плавное увеличение карточки при наведении
+    }
+  }
+  
+  // Стили для изображения продукта
+  .product-card img {
+    width: 100%; // Растягиваем изображение на всю ширину карточки
+    height: 70%; // Ограничиваем высоту изображения (оставляем место для текста)
+    object-fit: cover; // Изображение будет обрезаться, чтобы заполнить пространство без искажений
+    display: block; // Блоковое отображение
+  }
+  
+  // Стили для названия продукта
+  .product-card h3 {
+    text-align: center;
+    padding: 10px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #fff; // Белый цвет для текста
+    margin: 0; // Убираем отступы
+  }
+  
+  // Стили для кнопки "Загрузить еще"
+  .load-more-btn {
+    width: 100%; // Кнопка займет всю ширину родительского элемента
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  
+    &:hover {
+      background-color: #0056b3; // Изменение цвета при наведении
+    }
+  
+    &:disabled {
+      background-color: #cccccc; // Цвет кнопки при отключении
+      cursor: not-allowed; // Изменение курсора на недоступный
+    }
+  }
+  
+  // Стили для индикатора загрузки
+  .loading {
+    text-align: center;
+    padding: 10px;
+    font-size: 1rem;
+    color: #007bff;
+    font-weight: bold;
+  }
+  
+  // Стили для карточки с ошибкой
+  .error-message {
+    text-align: center;
+    padding: 20px;
+    font-size: 1.2rem;
+    color: red;
+    background-color: #f8d7da;
+    border-radius: 5px;
+  }
+  
