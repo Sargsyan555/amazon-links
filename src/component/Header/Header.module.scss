@@ -1,0 +1,30 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+
+  // Logo Section
+  .logo {
+    flex-shrink: 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  // Search Section
+
+  .right-section {
+    display: flex;
+    align-items: center;
+    gap: 10px; // Spacing between icons
+  
+    .icon {
+      cursor: pointer;
+      transition: transform 0.2s ease-in-out;
+  
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+}
